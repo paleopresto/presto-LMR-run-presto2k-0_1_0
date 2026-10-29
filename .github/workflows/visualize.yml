@@ -266,6 +266,11 @@ jobs:
     with:
       reconstruction_id: CFR_Run_${{ needs.find-latest-cfr-run.outputs.run_number }}_Reviz_${{ github.run_number }}
       artifact_name: cfr-data-for-viz-${{ github.run_number }}
+      # Name the output for paleopresto.com
+      site_dataset_id: presto2k
+      site_dataset_name: 'presto 2k'
+      site_version: '0_1_0'
+      n_realizations: '5'   # realizations (seed runs) to visualize
 
   deploy-to-github-pages:
     name: Deploy to GitHub Pages
